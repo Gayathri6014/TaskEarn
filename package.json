@@ -1,0 +1,28 @@
+{
+  "name": "taskearn",
+  "version": "1.0.0",
+  "description": "Earn money online by completing simple tasks such as sharing, liking, referring, and commenting through this easy-to-use app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gayathri6014/TaskEarn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gayathri6014/TaskEarn/issues"
+  },
+  "homepage": "https://github.com/Gayathri6014/TaskEarn#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5"
+  }
+}
