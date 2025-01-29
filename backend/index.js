@@ -66,8 +66,8 @@ app.post('/login', async (req, res) => {
 });
 
 // Start server
-app.listen(4001, () => {
-  console.log('Server is running on port 4001');
+app.listen(5000, () => {
+  console.log('Server is running on port 5000');
 });
 // Middleware to verify JWT token
 const verifyToken = (req, res, next) => {
@@ -79,7 +79,7 @@ const verifyToken = (req, res, next) => {
 
     try {
         // Verify the token
-        const decoded = jwt.verify(token, 'your_jwt_secret'); // Use the same secret used to sign the token
+        const decoded = jwt.verify(token, 'secretKey'); // Use the same secret used to sign the token
         req.user = decoded; // Attach the decoded user info to request
         next(); // Proceed to the protected route
     } catch (err) {
@@ -95,14 +95,3 @@ app.get('/profile', verifyToken, (req, res) => {
     });
 });
 
-// Login route (for testing purposes)
-app.post('/login', (req, res) => {
-    const user = { id: 1, name: 'John Doe', email: 'john.doe@example.com' }; // Example user
-    const token = jwt.sign(user, 'your_jwt_secret', { expiresIn: '1h' }); // Sign the JWT
-    res.json({ token }); // Send token back to client
-});
-
-// Start the server
-app.listen(4001, () => {
-    console.log('Server is running on port 4001');
-});
